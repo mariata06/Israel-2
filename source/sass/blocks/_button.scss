@@ -1,0 +1,35 @@
+.button {
+  @include text ($font-17, $height-20, $medium);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(108.42deg, $yellow 20.46%, $yellow-2 65.31%);
+  padding: 19px 40px 20px;
+  border-radius: 80px;
+  margin: 0 auto;
+  display: block;
+  font-family: "firasans", "Arial", sans-serif;
+  color: $white;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(00, 00, 00, 0.25);
+  margin-bottom: 24px;
+  margin-top: 16px;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(109.15deg, $yellow-2 -50.3%, $yellow-2 63.1%);
+  }
+
+  &:active {
+    background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(109.15deg, $yellow -50.3%, $yellow-2 63.1%);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+  }
+}

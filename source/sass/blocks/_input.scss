@@ -1,0 +1,29 @@
+input {
+  @include text ($font-17, $height-20, $medium);
+  padding: 18px 0 19px 40px;
+  border-radius: 80px;
+  border: 1px solid $light-grey;
+  font-family: "firasans", "Arial", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  width: 100%;
+  outline: none;
+  position: relative;
+
+  &:focus {
+    border-color: $yellow;
+  }
+
+  &:valid {
+    border-color: $black;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+  }
+
+  &::placeholder {
+    color: $black;
+    opacity: 0.5;
+  }
+}

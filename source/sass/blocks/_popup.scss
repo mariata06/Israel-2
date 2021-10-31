@@ -1,0 +1,143 @@
+.popup {
+  width: 480px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  //padding: 32px 32px 40px 48px;
+  border-radius: 8px;
+  color: $black;
+  box-shadow: 0 4px 4px rgba(00, 00, 00, 0.25);
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    top: 0;
+    left: 0;
+    transform: none;
+    //padding: 24px 16px 292px 16px;
+  }
+
+  .popup__close {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0;
+    overflow: visible;
+    z-index: 10;
+    margin-left: auto;
+    display: block;
+
+    &:hover,
+    &:focus {
+      &::before {
+        opacity: 0.7;
+      }
+    }
+
+    &::before {
+      content: url("../img/icon-close.svg");
+    }
+  }
+
+  p {
+    @include text-size-height ($font-15, $height-25);
+    margin-top: 0;
+    opacity: 0.87;
+
+    @media (max-width: $max-mobile-width) {
+      @include text-size-height ($font-14, $height-22);
+    }
+  }
+
+  h3 {
+    @include title ($font-28, $height-34, $bold, $blue);
+    letter-spacing: -2%;
+    margin: 0;
+    margin-bottom: 16px;
+
+    @media (max-width: $max-mobile-width) {
+      @include title ($font-24, $height-29, $bold, $blue);
+    }
+  }
+}
+
+.popup__content {
+  padding: 32px 32px 40px 48px;
+
+  @media (max-width: $max-mobile-width) {
+    padding: 24px 16px 292px 16px;
+  }
+}
+
+.popup--callback {
+  display: none;
+  z-index: 110;
+
+  &--show {
+    display: block;
+  }
+
+  p {
+    padding-right: 40px;
+  }
+
+  .button {
+    margin-top: 0;
+
+    @media (max-width: $max-mobile-width) {
+      width: 264px;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    h3 {
+      margin-top: 128px;
+    }
+
+    p {
+      padding-right: 0;
+    }
+
+    h3,
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.popup--success {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+
+  img {
+    display: block;
+    margin: 100px auto 20px;
+  }
+
+  h3,
+  p {
+    text-align: center;
+  }
+
+  p {
+    display: block;
+    width: 360px;
+    margin: 0 auto;
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
+    }
+  }
+
+  button {
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+}

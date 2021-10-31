@@ -1,0 +1,296 @@
+.page-header {
+  background-color: $brown;
+  background-image: url("../img/girl1.png"), url("../img/israel-bg-desktop@1x.png"), url("../img/header-bg-desktop@1x.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center bottom -96px, center 250px, top center;
+  background-size: cover, 80%, cover;
+  height: 850px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl2.png"), url("../img/israel-bg-desktop@2x.png"), url("../img/header-bg-desktop@2x.jpg");
+  }
+
+  @media (min-width: 1024px) and (max-width: 1366px) {
+    background-color: $brown;
+    background-image: url("../img/girl1.png"), url("../img/israel-bg-desktop@1x.png"), url("../img/header-bg-desktop@1x.jpg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center bottom -57px, center 250px, top center;
+    background-size: cover, 73%, cover;
+    height: 850px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl2.png"), url("../img/israel-bg-desktop@2x.png"), url("../img/header-bg-desktop@2x.jpg");
+    }
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    height: 600px;
+    background-image: url("../img/girl1.png"), url("../img/israel-bg-desktop@1x.png"), url("../img/header-bg-desktop@1x.jpg");
+    background-position: center bottom -80px, center 200px, top center;
+    background-size: cover, 80%, cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl2.png"), url("../img/israel-bg-desktop@2x.png"), url("../img/header-bg-desktop@2x.jpg");
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: $max-mobile-width) {
+    background-image: url("../img/girl1.png"), url("../img/israel-bg-desktop@1x.png"), url("../img/header-bg-desktop@1x.jpg");
+    background-position: center bottom -60px, center 200px, center center;
+    background-size: 455px 302px, 100%, cover;
+    height: 616px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl2.png"), url("../img/israel-bg-desktop@2x.png"), url("../img/header-bg-desktop@2x.jpg");
+      background-size: 910px 604px, 100%, cover;
+    }
+  }
+
+  @media (max-width: $min-mobile-width) {
+    background-image: url("../img/intro-bg-mobile@1x.jpg");
+    background-size: 100%;
+    background-position: center 20px;
+    background-color: unset;
+    height: 616px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-bg-mobile@2x.jpg");
+    }
+  }
+}
+
+.page-header__container {
+  position: relative;
+  height: 850px;
+  padding: 49px 114px 0 110px;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    height: 600px;
+  }
+
+  @media (min-width: 321px) and (max-width: $max-mobile-width) {
+    height: 616px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    height: 616px;
+    padding: 20px 7px 0 16px;
+  }
+
+  h1 {
+    @include title ($font-24, $height-29, $bold, $white);
+    text-align: center;
+    width: 343px;
+    margin: 465px auto 65px;
+
+    @media (min-width: 1024px) and (max-width: 1366px) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      margin: 270px auto 50px;
+    }
+
+    @media (min-width: 321px) and (max-width: $max-mobile-width) {
+      width: 100%;
+      margin-top: 320px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $min-mobile-width) {
+      @include text-size-height ($font-20, $height-24);
+      width: 100%;
+      margin: 273px auto 42px;
+      padding-right: 9px;
+    }
+  }
+}
+
+.page-header__button {
+  width: 56px;
+  height: 56px;
+  padding: 15px 15px;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border-radius: 100px;
+  border: 1px solid $white;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px $white;
+
+    img {
+      box-shadow: 0 0 10px $white;
+    }
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $min-mobile-width) {
+    margin: 0;
+    margin-left: 117px;
+  }
+
+  &::before {
+    --d: 5deg;
+    /* distance between dashes */
+    --n: 30;
+    /* number of dashes */
+    --c: #ffffff;
+    /* color of dashes */
+    --b: 2px;
+    /* control the thickness of border*/
+
+    content: "";
+    z-index: 100;
+    height: 76px;
+    width: 76px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    background: repeating-conic-gradient(var(--c) 0 calc(360deg / var(--n) - var(--d)), transparent 0 calc(360deg / var(--n)));
+    mask: radial-gradient(farthest-side, transparent calc(100% - var(--b)), #ffffff calc(100% - var(--b) + 1px));
+  }
+
+  &::after {
+    content: "";
+    height: 50px;
+    width: 1px;
+    top: 65px;
+    position: absolute;
+    left: 27px;
+    display: block;
+    background: linear-gradient($white, $white) 4px 3px/1px 40px;
+  }
+}
+
+.page-header__phone-links {
+  display: flex;
+  width: 150px;
+  flex-wrap: wrap;
+
+  a {
+    color: $black;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+      transition: 0.5s ease;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 14px;
+      line-height: 17px;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    text-align: right;
+  }
+}
+
+.page-header__callback-link {
+  color: $black;
+  border-bottom: 1px dashed $black;
+  display: inline;
+  text-align: right;
+  align-self: baseline;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: 0.5s ease;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (min-width: 321px) and (max-width: $max-mobile-width) {
+    margin-left: auto;
+    width: auto;
+    align-self: end;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 500;
+  }
+
+  @media (max-width: $min-mobile-width) {
+    font-size: 13px;
+    line-height: 15px;
+    margin-left: auto;
+  }
+}
+
+.page-header__site-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: unset;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  height: 48px;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    margin: 0;
+    top: -30px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    height: 42px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    transform: unset;
+  }
+
+  img {
+    @media (max-width: $max-mobile-width) {
+      width: 120px;
+      height: 42px;
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.request {
+  background-image: url("../img/girl-flag-bg-desktop@1x.jpg"), url("../img/backpack-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: 60%, 10%;
+  background-position: right 12px, center left;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl-flag-bg-desktop@2x.png"), url("../img/backpack-desktop@2x.png");
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/girl-flag-bg-mobile@1x.jpg"), url("../img/backpack-mobile@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 10%;
+    background-position: center 353px, center top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl-flag-bg-mobile@2x.jpg"), url("../img/backpack-mobile@2x.png");
+    }
+  }
+}
+
+.request__container {
+  padding: 221px 679px 28px 210px;
+
+  @media (min-width: 1024px) and (max-width: 1250px) {
+    padding: 100px 500px 100px 100px;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding: 50px 270px 100px 100px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 64px 16px 300px 17px;
+    width: 100%;
+  }
+
+  h2 {
+    @include reset;
+    @include title ($font-40, $height-49, $bold, $blue);
+    font-family: "montserrat", "Arial", sans-serif;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @media (max-width: $max-mobile-width) {
+      @include title ($font-32, $height-39, $bold, $blue);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  }
+
+  p {
+    @include text-size-height ($font-17, $height-29);
+    width: 400px;
+    margin-bottom: 64px;
+    margin-top: 0;
+    opacity: 0.87;
+
+    @media (max-width: $max-mobile-width) {
+      @include text-size-height ($font-16, $height-26);
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.request__form {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 477px;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    width: 477px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  label {
+    width: 100%;
+  }
+
+  .button {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    padding-left: 35px;
+    padding-right: 30px;
+    letter-spacing: 1px;
+    font-size: 15px;
+
+    @media (max-width: $max-mobile-width) {
+      position: relative;
+      left: unset;
+      display: block;
+      width: 264px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.request__input {
+  @include text-size-height ($font-15, $height-25);
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 13px;
+
+  &--invalid {
+    border: 1px solid $red;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding-top: 18px;
+    padding-bottom: 13px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 18px;
+    padding-bottom: 13px;
+  }
+}

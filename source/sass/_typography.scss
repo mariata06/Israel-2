@@ -1,0 +1,48 @@
+// FONTS
+@font-face {
+  font-family: "firasans";
+  src: local("firasans regular"), local("firasans-regular"), url("../fonts/firasans-regular.woff2") format("woff2"), url("../fonts/firasans-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "firasans";
+  src: local("firasans bold"), local("firasans-bold"), url("../fonts/firasans-bold.woff2") format("woff2"), url("../fonts/firasans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "firasans";
+  src: local("firasans semibold"), local("firasans-semibold"), url("../fonts/firasans-semibold.woff2") format("woff2"), url("../fonts/firasans-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "firasans";
+  src: local("firasans medium"), local("firasans-medium"), url("../fonts/firasans-medium.woff2") format("woff2"), url("../fonts/firasans-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: local("montserrat bold"), local("montserrat-bold"), url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "raleway";
+  src: local("raleway extrabold"), local("raleway-extrabold"), url("../fonts/raleway-extrabold.woff2") format("woff2"), url("../fonts/raleway-extrabold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

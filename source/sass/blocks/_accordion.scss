@@ -1,0 +1,98 @@
+.accordion__item {
+  padding-top: 24px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $light-grey;
+  cursor: pointer;
+
+  &:focus {
+    //background-color: $light-grey;
+    //outline: 1px solid $light-grey;
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-bottom: 16px;
+    margin-bottom: 22px;
+    padding-top: 0;
+  }
+
+  &--active {
+    padding-bottom: 31px;
+
+
+    @media (max-width: $max-mobile-width) {
+      padding-bottom: 15px;
+    }
+
+    .accordion__item-content {
+      display: block;
+    }
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  span {
+    @include text ($font-28, $height-48, $bold);
+    background: linear-gradient(to right, $yellow 0%, $yellow-2 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 17px;
+
+    @media (max-width: $max-mobile-width) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.accordion__item-trigger {
+  @include text-size-height ($font-17, $height-26);
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  position: relative;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: $black;
+  text-align: left;
+  padding: 0;
+
+  &:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 16px;
+  }
+
+  svg {
+    width: 17px;
+    min-width: 17px;
+    height: 11px;
+    margin-left: auto;
+    fill: $white;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+      transition: 0.3s ease;
+    }
+  }
+}
+
+.accordion__item-content {
+  @include text-size-height ($font-15, $height-21);
+  display: none;
+  padding-top: 16px;
+  padding-right: 20px;
+  opacity: 0.74;
+
+  @media (max-width: $max-mobile-width) {
+    @include text-size-height ($font-14, $height-22);
+    padding-top: 18px;
+  }
+}

@@ -1,0 +1,10 @@
+.error-message {
+  @include text ($font-13, $height-19, $regular);
+  margin-bottom: 0;
+  color: $red;
+  visibility: hidden;
+
+  &--show {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,214 @@
+.howto {
+  background-image: url("../img/bg-howto-desktop@1x.png"), url("../img/trip-watercolor-bg-desktop@1x.png"), url("../img/stamp-desktop@1x.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 42.5%, 85%, 15%;
+  background-position: 11px 164px, center left, center right;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-howto-desktop@2x.png"), url("../img/trip-watercolor-bg-desktop@2x.png"), url("../img/stamp-desktop@2x.png");
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/stamp-mobile@1x.png");
+    background-position: right center;
+    background-size: 60%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/stamp-mobile@2x.png");
+    }
+  }
+}
+
+.howto__container {
+  padding: 196px 131px 172px 680px;
+
+  @media (min-width: 1024px) and (max-width: 1250px) {
+    padding-left: 550px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding: 20px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 37px 16px 80px 8px;
+  }
+
+  h2 {
+    @include reset;
+    @include title ($font-40, $height-49, $bold, $blue);
+    font-family: "montserrat", "Arial", sans-serif;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    padding-left: 20px;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      text-align: center;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include title ($font-32, $height-39, $bold, $blue);
+      text-align: center;
+      padding-left: 0;
+      margin-bottom: 26px;
+    }
+  }
+
+  p {
+    @include reset;
+    @include text-size-height ($font-15, $height-25);
+    margin-bottom: 34px;
+    padding-left: 20px;
+    padding-right: 46px;
+    opacity: 0.87;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      text-align: center;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include text-size-height ($font-14, $height-22);
+      text-align: left;
+      padding: 0 0 0 8px;
+      margin-bottom: 23px;
+    }
+  }
+
+  ul {
+    @include list-reset;
+    padding-right: 46px;
+    position: relative;
+
+    &::before {
+      background: repeating-linear-gradient(to bottom, transparent 0 6px, #484848 6px 12px) 80%/2px 100% no-repeat;
+      position: absolute;
+      opacity: 0.2;
+      width: 10px;
+      height: 266px;
+      content: "";
+      display: block;
+      left: 16px;
+      top: 15px;
+    }
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      margin-left: auto;
+      text-align: right;
+      width: 400px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      padding-right: 0;
+    }
+  }
+
+  span {
+    @include text ($font-17, $height-29, $bold);
+    margin-right: 20px;
+    color: $yellow;
+    z-index: 100;
+    border-radius: 100px;
+    padding: 8px 18px;
+    background: $white;
+    box-shadow: 0 4px 4px rgba(00, 00, 00, 0.1);
+
+    @media (max-width: $max-mobile-width) {
+      padding: 8px 16px;
+      margin-right: 10px;
+    }
+  }
+
+  .howto__condition {
+    @include text ($font-17, $height-29, $bold);
+    margin-bottom: 18px;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      margin-left: auto;
+      text-align: right;
+      width: 350px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include text ($font-16, $height-26, $bold);
+      margin-bottom: 18px;
+    }
+  }
+
+  .howto__note {
+    opacity: 0.5;
+    padding-left: 37px;
+    position: relative;
+    padding-right: 0;
+    margin-top: 40px;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      text-align: left;
+      width: 400px;
+      margin-left: auto;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include reset;
+      padding-left: 15px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 4px;
+      height: 42px;
+      background: linear-gradient(to right, #ffc341 0%, #ffd701 100%);
+      position: absolute;
+      left: 20px;
+      top: 5px;
+
+      @media (max-width: $max-mobile-width) {
+        height: 88px;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.howto__list-item {
+  @include text-size-height ($font-15, $height-21);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  opacity: 0.87;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    @include text-size-height ($font-14, $height-22);
+    margin-bottom: 48px;
+  }
+}
+
+.howto__list-item--second {
+  margin-bottom: 30px;
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 38px;
+  }
+}
+
+.howto__list-item--third {
+  margin-bottom: 37px;
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.howto__list-item--fourth {
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,58 @@
+.callback-form {
+  color: $black;
+
+  label {
+    @include text-size-height ($font-15, $height-25);
+    opacity: 0.74;
+
+    @media (max-width: $max-mobile-width) {
+      @include text-size-height ($font-13, $height-19);
+    }
+  }
+
+  .callback-form__checkbox-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 40px;
+    display: block;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 15px;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $yellow;
+      border-image: linear-gradient(to right top, $yellow-2, $yellow, $yellow-2);
+      border-radius: 2px;
+      border-image-slice: 1;
+    }
+  }
+
+  .callback-form__checkbox:checked + label {
+    position: relative;
+
+    &::before {
+      content: url("../img/icon-tick.svg");
+      fill: $black;
+      position: absolute;
+      top: 0;
+      left: 17px;
+      z-index: 11;
+      cursor: pointer;
+    }
+  }
+
+  .callback-form__checkbox:focus + label::after {
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
+  }
+
+  .callback-form__checkbox:checked:focus + label::after,
+  .callback-form__checkbox:checked:hover + label::after {
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
+  }
+}
